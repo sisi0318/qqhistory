@@ -1,0 +1,29 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+php*
+
+# 数据库文件
+*.db
+*.db-shm
+*.db-wal
+
+# 日志文件
+*.log
+
+cookie.json
+uids.json
