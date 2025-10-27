@@ -28,9 +28,12 @@ cookie.json的格式示例：
 }
 ```
 
-## 2.
+## 2. 使用
 
 cargo build --relsese 
 
 qqhistory.exe --uin=uin
 
+## 当前仅支持
+文字 / 图片（nt） / 回复 / 语音（nt） /视频（nt）
+标记的nt均为 nt_rich_media
