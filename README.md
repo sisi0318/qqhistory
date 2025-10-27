@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # 此为半成品 仅供参考
 
 # QQ历史消息拉取工具
@@ -37,3 +39,7 @@ qqhistory.exe --uin=uin
 ## 当前仅支持
 文字 / 图片（nt） / 回复 / 语音（nt） /视频（nt）
 标记的nt均为 nt_rich_media
+
+## License
+
+本项目使用 MIT 许可证，详见仓库根目录的 `LICENSE` 文件。
