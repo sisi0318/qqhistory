@@ -3,7 +3,7 @@ use crate::elem::ParserInterface;
 use crate::elem::text_elem::TextElem;
 use crate::elem::common_elem::CommonElem;
 use crate::elem::reply_elem::ReplyElem;
-use base64::{Engine as _, engine::general_purpose};
+// use base64::{Engine as _, engine::general_purpose};
 
 /// ELEM解析器主类
 pub struct ElemParser {
@@ -82,25 +82,6 @@ impl ElemParser {
         }
 
         arrays
-    }
-
-    /// 获取纯文本内容
-    pub fn text(&self) -> String {
-        let mut texts = Vec::new();
-
-        for elem in &self.elems {
-            if let Some(text_data) = elem.get("text") {
-                if let Some(str_value) = text_data.get("str").and_then(|v| v.as_str()) {
-                    if let Ok(decoded) = general_purpose::STANDARD.decode(str_value) {
-                        if let Ok(text) = String::from_utf8(decoded) {
-                            texts.push(text);
-                        }
-                    }
-                }
-            }
-        }
-
-        texts.join("")
     }
 }
 

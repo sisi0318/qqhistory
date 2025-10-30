@@ -156,6 +156,7 @@ impl Database {
     }
 
     /// 检查消息是否存在
+    #[allow(dead_code)]
     pub fn message_exists(&self, msg_seq: i64) -> Result<bool> {
         let count: i64 = self.conn.query_row(
             "SELECT COUNT(*) FROM messages WHERE msg_seq = ?1",
@@ -166,6 +167,7 @@ impl Database {
     }
 
     /// 获取消息总数
+    #[allow(dead_code)]
     pub fn get_message_count(&self) -> Result<i64> {
         let count: i64 = self
             .conn
@@ -174,6 +176,7 @@ impl Database {
     }
 
     /// 获取所有消息（按msg_time降序排序）
+    #[allow(dead_code)]
     pub fn get_all_messages(&self, limit: i64, offset: i64) -> Result<Vec<Value>> {
         let mut stmt = self.conn.prepare(
             "SELECT id, from_uin, to_uin, from_uid, to_uid, msg_seq, msg_uid, 
@@ -211,6 +214,7 @@ impl Database {
     }
 
     /// 按时间范围查询消息（按msg_time降序）
+    #[allow(dead_code)]
     pub fn get_messages_by_time_range(&self, start_time: i64, end_time: i64) -> Result<Vec<Value>> {
         let mut stmt = self.conn.prepare(
             "SELECT id, from_uin, to_uin, from_uid, to_uid, msg_seq, msg_uid, 

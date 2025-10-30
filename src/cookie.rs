@@ -38,6 +38,7 @@ pub struct LoginInfo {
     pub uin: String,
     pub nickname: String,
     pub avatar: String,
+    #[allow(dead_code)]
     pub p_skey: String,
     pub g_tk: i64,
     pub expire_at: i64,
